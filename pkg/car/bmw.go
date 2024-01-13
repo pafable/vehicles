@@ -6,8 +6,11 @@ type Bmw struct {
 
 func newBmw() ICar {
 	return &Bmw{
-		Car{
-			model: "M340i",
+		Car: Car{
+			specs: map[string]string{
+				"mfr":    "bmw",
+				"origin": "DE",
+			},
 		},
 	}
 }

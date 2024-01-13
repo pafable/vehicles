@@ -1,6 +1,7 @@
 package car
 
 type ICar interface {
-	getModel() string
-	setModel(model string)
+	GetMfr() string
+	SetDetail(key string, value string)
+	GetSpec(query string) string
 }

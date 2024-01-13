@@ -1,13 +1,17 @@
 package car
 
 type Car struct {
-	model string
+	specs map[string]string
 }
 
-func (c Car) setModel(model string) {
-	c.model = model
+func (c *Car) SetDetail(key string, value string) {
+	c.specs[key] = value
 }
 
-func (c Car) getModel() string {
-	return c.model
+func (c *Car) GetMfr() string {
+	return c.specs["mfr"]
+}
+
+func (c *Car) GetSpec(query string) string {
+	return c.specs[query]
 }
