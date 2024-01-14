@@ -1,8 +1,8 @@
 package main
 
 import (
-	"cars/pkg/car"
-	"fmt"
+	"github.com/pafable/cars/pkg/car"
+	"github.com/pafable/cars/pkg/plane"
 	"log"
 )
 
@@ -17,8 +17,14 @@ func main() {
 	beemer.SetDetail("speed", "fast")
 	log.Println(beemer)
 
-	fmt.Println(beemer.GetSpec("speed"))
+	log.Println(beemer.GetSpec("speed"))
 
 	log.Println(beemer.GetMfr())
 	log.Println(beemer.GetSpec("origin"))
+
+	raptor, err := plane.GetPlane("F22", 2.2)
+	raptor.SetDetail("pilot", "1")
+	log.Println(raptor)
+	log.Println(raptor.GetMach())
+	log.Println(raptor.GetSpec("pilot"))
 }

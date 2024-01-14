@@ -1,8 +1,8 @@
-package car
+package plane
 
-type ICar interface {
+type IPlane interface {
 	GetMfr() string
 	SetDetail(key string, value string)
 	GetSpec(query string) string
-	GetSpeed() int
+	GetMach() float32
 }

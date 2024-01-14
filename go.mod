@@ -1,4 +1,4 @@
-module cars
+module github.com/pafable/cars
 
 go 1.21.3
 
